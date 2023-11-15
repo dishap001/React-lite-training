@@ -1,0 +1,49 @@
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  text-align: center; 
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd; 
+  margin: auto;
+}
+
+
+th, td {
+
+  padding: 8px;
+  border: 1px solid #ddd; 
+  text-align: center; 
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ddd; 
+  margin-bottom: 10px;
+}
+
+/* Style for error messages */
+div.error {
+  color: red;
+  margin-top: 5px;
+}
+
+/* Style for the button */
+button {
+  padding: 8px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}

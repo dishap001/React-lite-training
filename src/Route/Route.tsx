@@ -6,6 +6,7 @@
 // import Home from "../components/Home";
 import { lazy } from "react";
 import Loading from "../Loading/Loading";
+
 // import Npatil from "../Parent/NP";
 // import Dpatil from "../Parent/Child/DP";
 // import Ppatil from "../Parent/Child/gchild/PP";
@@ -22,7 +23,8 @@ const Npatil =Loading(lazy(async()=> await import('../Parent/NP')));
 const Dpatil =Loading(lazy(async()=> await import('../Parent/Child/DP')));
 const Ppatil =Loading(lazy(async()=> await import('../Parent/Child/gchild/PP')));
 
-
+const UserForm = Loading(lazy(async()=>await import('../Form/UserForm')));
+const TableForm = Loading(lazy(async()=>await import('../Form/TableForm')));
 
 const routes =[
     {
@@ -62,6 +64,14 @@ const routes =[
             }
         ]
     },
+    {
+        path:'/form',
+        element:<UserForm/>
+    },
+    {
+        path:'/tableform',
+        element:<TableForm/>
+    }
     
 ];
 

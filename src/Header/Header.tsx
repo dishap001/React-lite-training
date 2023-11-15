@@ -22,8 +22,13 @@ function Header() {
                 <li><Link to='/Hook3'>Hook 3</Link></li>
                 <li><Link to='/NP/'>Nptail</Link></li>
             </ul>
-            
             <button onClick={gotoHook4}>Hook 4</button>
+            <ul className="Menu">
+                <li><Link to='/Form'> User Form</Link></li>
+                <li><Link to='/tableform'> Tabular Form</Link></li>
+
+            </ul>
+            
         </nav>
    </div>
   );
