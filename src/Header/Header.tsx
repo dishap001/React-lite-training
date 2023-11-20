@@ -26,6 +26,7 @@ function Header() {
             <ul className="Menu">
                 <li><Link to='/Form'> User Form</Link></li>
                 <li><Link to='/tableform'> Tabular Form</Link></li>
+                <li><Link to='/BootstrapForm'> Bootstrap Form</Link></li>
 
             </ul>
             

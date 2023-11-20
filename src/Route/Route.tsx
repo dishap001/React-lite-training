@@ -25,7 +25,9 @@ const Ppatil =Loading(lazy(async()=> await import('../Parent/Child/gchild/PP')))
 
 const UserForm = Loading(lazy(async()=>await import('../Form/UserForm')));
 const TableForm = Loading(lazy(async()=>await import('../Form/TableForm')));
+const BootstrapForm = Loading(lazy(async()=>await import('../Form/BootstrapForm')));
 
+const backgroundImage = '../Assets/scenary.jpg';
 const routes =[
     {
         path:'/',
@@ -71,6 +73,10 @@ const routes =[
     {
         path:'/tableform',
         element:<TableForm/>
+    },
+    {
+        path:'/BootstrapForm',
+        element:<BootstrapForm backgroundImage={backgroundImage}/>
     }
     
 ];

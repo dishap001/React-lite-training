@@ -1,0 +1,10 @@
+
+body{
+    background-image:url('../Assets/scenary.jpg');
+    background-size: cover;
+    height: 140vh;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+  }

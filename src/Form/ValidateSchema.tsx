@@ -18,17 +18,30 @@ export const ValidateSchema = Yup.object().shape({
   confirmPassword: Yup.string()
     .oneOf([Yup.ref('password'), undefined], 'Passwords must match')
     .required('Confirm Password is required'),
-  dob: Yup.date().max(new Date(), 'Date of Birth must be before today').required('Date of Birth is required'),
 
-  age: Yup.number().positive().integer().min(19, 'Please enter valid age.')
-  .max(50, 'Age must be less than or equal to 50')
-    .test(
-      'is-valid-age',
-      'Age must be between 0 and 100',
-      (value?: number) => value === undefined || (value >= 0 && value <= 100),
-    )
-    .required("Please enter your age."),
-});
+    dob: Yup.date()
+    .max(new Date(new Date().getTime() - 24 * 60 * 60 * 1000), "Date of birth cannot be in the future.")
+    // .max(
+    //   Yup.ref("yesterday"),
+    //   "Date of birth cannot be today or in the future."
+    // )
+    .required("Please enter your date of birth."),
+  // yesterday: Yup.date().default(
+  //   () => new Date(new Date().getTime() - 24 * 60 * 60 * 1000)
+  // ),
+
+
+
+
+    age: Yup.number().positive().integer().min(19, 'Please enter valid age.')
+    .max(50, 'Age must be less than or equal to 50')
+      .test(
+        'is-valid-age',
+        'Age must be between 0 and 100',
+        (value?: number) => value === undefined || (value >= 0 && value <= 100),
+      )
+      .required("Please enter your age."),
+      });
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const valTable = Yup.object().shape({
