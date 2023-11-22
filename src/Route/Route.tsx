@@ -7,7 +7,7 @@
 import { lazy } from "react";
 import Loading from "../Loading/Loading";
 
-// import Npatil from "../Parent/NP";
+// import Parent from "../Parent/NP";
 // import Dpatil from "../Parent/Child/DP";
 // import Ppatil from "../Parent/Child/gchild/PP";
 
@@ -19,15 +19,15 @@ const Hook2 =Loading(lazy(async()=> await import('../Hooks/Hook2')));
 const Hook3 =Loading(lazy(async()=> await import('../Hooks/Hook3')));
 const Hook4 =Loading(lazy(async()=> await import('../Hooks/Hook4')));
 
-const Npatil =Loading(lazy(async()=> await import('../Parent/NP')));
-const Dpatil =Loading(lazy(async()=> await import('../Parent/Child/DP')));
-const Ppatil =Loading(lazy(async()=> await import('../Parent/Child/gchild/PP')));
+const Parent =Loading(lazy(async()=> await import('../Parent/PARENT')));
+const Child =Loading(lazy(async()=> await import('../Parent/Child/CHILD1')));
+const SubChild1 =Loading(lazy(async()=> await import('../Parent/Child/gchild/SUBCHILD1')));
 
 const UserForm = Loading(lazy(async()=>await import('../Form/UserForm')));
 const TableForm = Loading(lazy(async()=>await import('../Form/TableForm')));
 const BootstrapForm = Loading(lazy(async()=>await import('../Form/BootstrapForm')));
 
-const backgroundImage = '../Assets/scenary.jpg';
+const backgroundImage = '../Assets/image';
 const routes =[
     {
         path:'/',
@@ -50,17 +50,17 @@ const routes =[
         element:<Hook4 />
     },
     {//grandfather
-        path:'/NP/',
-        element:<Npatil />,
+        path:'/PARENT/',
+        element:<Parent />,
         children:[
             {//father
-                name:'DP',
-                path:'DP',
-                element:<Dpatil />,
+                name:'CHILD1',
+                path:'CHILD1',
+                element:<Child />,
                 children:[{//son
-                    name:'PP',
-                    path:'PP',
-                     element:<Ppatil />
+                    name:'SUBCHILD1',
+                    path:'SUBCHILD1',
+                     element:<SubChild1 />
                 }]
 
             }

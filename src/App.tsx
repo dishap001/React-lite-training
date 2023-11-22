@@ -5,9 +5,6 @@ import routes from './Route/Route'
 import Header from './Header/Header';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
   
 function App() {
   const routing = useRoutes(routes);

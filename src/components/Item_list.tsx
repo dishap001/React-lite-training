@@ -1,6 +1,4 @@
 
-
-
 interface item_list {
   dis: number | null
   stationary_list: {

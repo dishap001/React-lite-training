@@ -20,7 +20,7 @@ function Header() {
                 <li><Link to='/Hooks'>Hook 1</Link></li>
                 <li><Link to='/Hook2'>Hook 2</Link></li>
                 <li><Link to='/Hook3'>Hook 3</Link></li>
-                <li><Link to='/NP/'>Nptail</Link></li>
+                <li><Link to='/PARENT/'>Child Routing</Link></li>
             </ul>
             <button onClick={gotoHook4}>Hook 4</button>
             <ul className="Menu">
